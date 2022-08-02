@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../metadata_css/metadata.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+  <!-- Dashboard Side Pane -->
+  <div id="dashboard_details">
+      <div id="top_sidebar">
+          <div id="logo">
+              <img src="../media/White Logo.png" alt="">
+          </div>
+          <div id="user_profile">
+                <div id="profile_image"><img src="../media/download.jpeg" alt=""></div>
+                <div id="userame_jobtype">
+                      <div id="username">
+                          <p>Demola Daniels</p>
+                      </div>
+                      <div id="jobtype">Metadata Analyst</div>
+                  </div>
+          </div>
+          <div id="second_part">
+              <div id="details">
+              <div id="icon"><img src="../media/user.png" alt=""></div>
+              <div id="text">Profile</div>
+
+              </div>
+              <div id="details">
+              <div id="icon"><img src="../media/report-columns.png" alt=""></div>
+              <div id="text">Dashboard</div>
+
+              </div>
+              <div id="details">
+              <div id="icon"><img src="../media/upload.png" alt=""></div>
+              <div id="text">Upload & Extract</div>
+
+              </div>
+              <div id="details">
+              <div id="icon"><img src="../media/bookmark-empty.png" alt=""></div>
+              <div id="text">Metadata Library</div>
+
+              </div>
+          </div>
+
+      </div>
+      <div id="bottom_sidebar">
+          <div id="support_section">
+              <div id="support_image">
+                  <img src="../media/Contact-support.png" alt="">
+              </div>
+              <div id="support_button">
+                  <input type="button" value="Contact Support">
+              </div>
+          </div>
+          <div id="logout">
+              <div id="icon"><img src="../media/log-out.png" alt=""></div>
+              <div id="log">Logout</div>
+          </div>
+      </div>
+
+  </div>
+  <!-- End of Dashboard Side Pane -->
+  
+  <!-- Main Sections -->
+  <main>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="searchfield">
+          <span id="searchicon">
+            <img src="../media/search-normal.png" alt="Search">
+          </span>
+          <input type="search" name="search" id="searchinput">
+        </div>
+        <div class="profile">
+          <span class="profile-photo">
+            <img src="" alt="">
+          </span>
+          <p class="profile-intro">
+            Hey, <span class="username"><!-- {{ user.username }} -->Demola</span>
+          </p>
+        </div>
+        <div class="notification">
+          <span class="bing">
+            <img src="../media/notification-bing.svg" alt="Notifications">
+          </span>
+          <span class="user">
+            <img src="../media/user.svg" alt="User">
+          </span>
+        </div>
+    </nav>
+    <!-- End Navigation Bar -->
+    
+    <!-- Greeting and CTA buttons -->
+    <div class="welcome-wrapper">
+        <div class="greeting-div">
+            <h4>Good afternoon, Demola</h4>
+            <p>What would you like to do today?</p>
+        </div>
+        <div class="cta-btns">
+            <button class="primary-btn upload-btn">
+            <img src="" alt="Add Icon">
+            Upload File
+            </button>
+            <button class="secondary-btn ">
+            View Saved Metadata
+            </button>
+        </div>
+    </div>
+    <!-- End Greeting and CTA buttons -->
+
+    <!-- Statistics Cards -->
+    <div>
+        <div class="stat-card">
+            <div>
+                <p>Extracted Metadata</p>
+                <img src="" alt="">
+            </div>
+            <div>
+                <p>200</p>
+                <p>100%</p>
+            </div>
+            <div>
+                <p>120 <span>JPG</span></p>
+                <p>30 <span>PNG</span></p>
+                <p>20 <span>PDF</span></p>
+                <p>10 <span>CSV</span></p>
+                <p>20 <span>JSON</span></p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <p>Downloaded Metadata</p>
+                <img src="" alt="">
+            </div>
+            <div>
+                <p>120</p>
+                <p>60%</p>
+            </div>
+            <div>
+                <p>30 <span>JPG</span></p>
+                <p>30 <span>PNG</span></p>
+                <p>10 <span>PDF</span></p>
+                <p>25 <span>CSV</span></p>
+                <p>25 <span>JSON</span></p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <p>Saved Metadata</p>
+                <img src="" alt="">
+            </div>
+            <div>
+                <p>120</p>
+                <p>60%</p>
+            </div>
+            <div>
+                <p>30 <span>JPG</span></p>
+                <p>30 <span>PNG</span></p>
+                <p>10 <span>PDF</span></p>
+                <p>25 <span>CSV</span></p>
+                <p>25 <span>JSON</span></p>
+            </div>
+        </div>
+    </div> 
+    <!-- End Statistics Cards -->
+
+    <!-- Recently Saved Section -->
+    <div>
+        <div>
+            <h4>Recently Saved</h4>
+            <a href="#">See more</a>
+        </div>
+        <!-- Recently saved items -->
+        <div class="recent items">
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>How To Fetch Metadata Like A Professional</p>
+                    <span>
+                        <p>PDF</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>15mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>23 Jun 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- Image icon image -->
+                </div>
+                <div>
+                    <p>Beach Hangout</p>
+                    <span>
+                        <p>PNG</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>4mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>26 Jun 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- Image icon image -->
+                </div>
+                <div>
+                    <p>Metamagic Mockup Screen</p>
+                    <span>
+                        <p>JPEG</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>5mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>6 May 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>Steal Like An Artist</p>
+                    <span>
+                        <p>PDF</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>12mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>23 Jun 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>I4G & Zuri Company Profile</p>
+                    <span>
+                        <p>PDF</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>25mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>20 Jun 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>Team 89 Weekly Attendance List</p>
+                    <span>
+                        <p>CSV</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>456kb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>15 May 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>Metamagic Landing Page Backend</p>
+                    <span>
+                        <p>JSON</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>4mb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>17 Feb 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+            <div class="recent-item">
+                <div>
+                    <img src="" alt=""> <!-- File icon image -->
+                </div>
+                <div>
+                    <p>Zuri Project Phase Terms and Conditions</p>
+                    <span>
+                        <p>DOC</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>96kb</p>
+                        <img src="" alt=""> <!-- Bullet point image -->
+                        <p>14 Jan 2022</p>
+                    </span>
+                </div>
+                <div>
+                    <img src="" alt=""> <!-- Download icon -->
+                    <img src="" alt=""> <!-- Share icon -->
+                </div>
+            </div>
+        </div>
+        <!-- End recently saved items -->
+    </div>
+    <!-- End Recently Saved Section -->
+
+    <!-- File Types Section -->
+    <div>
+        <div>
+            <h4>File Types</h4>
+            <img src="" alt=""> <!-- Filter icon -->
+        </div>
+        <div class="file-types-slider">
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>PNG</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>XLS</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>JSON</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>PDF</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>DOC</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>DVI</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>TXT</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>HEIC</p>
+            </div>
+            <div class="file-types-item">
+                <span>
+                    <img src="" alt="">
+                </span>
+                <p>CSV</p>
+            </div>
+        </div>
+        
+    </div>
+    <!-- End File Types Section -->
+
+    </main>
+  <!-- End of Main Sections -->
+</body>
+</html>
