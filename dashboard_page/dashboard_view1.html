@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../metadata_css/metadata.css">
-
+    <link rel="stylesheet" href="stylesheets/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
@@ -65,271 +65,271 @@
               <div id="log">Logout</div>
           </div>
       </div>
-
   </div>
   <!-- End of Dashboard Side Pane -->
   
   <!-- Main Sections -->
   <main>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="searchfield">
+    <nav class="navbar">
+        <div class="searchbar">
           <span id="searchicon">
             <img src="../media/search-normal.png" alt="Search">
           </span>
-          <input type="search" name="search" id="searchinput">
+          <input type="search" name="search" placeholder="Search" id="searchinput">
         </div>
-        <div class="profile">
-          <span class="profile-photo">
-            <img src="" alt="">
-          </span>
-          <p class="profile-intro">
-            Hey, <span class="username"><!-- {{ user.username }} -->Demola</span>
-          </p>
-        </div>
-        <div class="notification">
-          <span class="bing">
-            <img src="../media/notification-bing.svg" alt="Notifications">
-          </span>
-          <span class="user">
-            <img src="../media/user.svg" alt="User">
-          </span>
+        <div class="navlinks">
+            <div class="profile">
+                <img class="profile-photo" src="../media/download.jpeg" alt="">
+                
+                <p class="profile-intro title">
+                    Hey, <span class="username"><!-- {{ user.username }} -->Demola</span>
+                </p>
+            </div>
+            <div class="notification">
+                <span class="bing">
+                  <img src="../media/notification-bing.svg" alt="Notifications">
+                </span>
+                <span class="user">
+                  <img src="../media/user.svg" alt="User">
+                </span>
+            </div>
         </div>
     </nav>
     <!-- End Navigation Bar -->
     
     <!-- Greeting and CTA buttons -->
     <div class="welcome-wrapper">
-        <div class="greeting-div">
-            <h4>Good afternoon, Demola</h4>
-            <p>What would you like to do today?</p>
+        <div class="welcome-div">
+            <h1 class="title welcome-title">Good afternoon, Demola</h1> <!-- {{user.username}} -->
+            <p class="welcome-text">What would you like to do today?</p>
         </div>
         <div class="cta-btns">
             <button class="primary-btn upload-btn">
-            <img src="" alt="Add Icon">
-            Upload File
+                <img src="assets/icons/plus-white.png" alt="Add" id="plus-icon">
+                Upload File
             </button>
-            <button class="secondary-btn ">
-            View Saved Metadata
+            <button class="secondary-btn">
+                View Saved Metadata
             </button>
         </div>
     </div>
     <!-- End Greeting and CTA buttons -->
 
     <!-- Statistics Cards -->
-    <div>
+    <div class="stats-section">
         <div class="stat-card">
-            <div>
-                <p>Extracted Metadata</p>
-                <img src="" alt="">
+                <div class="stat-header">
+                    <p class="stat-title">Extracted Metadata</p>
+                    <img src="assets/icons/orange-page.svg" alt="" class="stat-img">
+                </div>
+                <div class="stat-figures">
+                    <p class="stat-num">200</p>
+                    <p class="stat-percent">100%</p>
+                </div>
+                <div class="stat-files">
+                    <p class="stat-fname">120 <span class="stat-ftype">JPG</span></p>
+                    <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                    <p class="stat-fname">20 <span class="stat-ftype">PDF</span></p>
+                    <p class="stat-fname">10 <span class="stat-ftype">CSV</span></p>
+                    <p class="stat-fname">20 <span class="stat-ftype">JSON</span></p>
+                </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <p class="stat-title">Downloaded Metadata</p>
+                <img src="assets/icons/orange-download.svg" alt="" class="stat-img">
             </div>
-            <div>
-                <p>200</p>
-                <p>100%</p>
+            <div class="stat-figures">
+                <p class="stat-num">120</p>
+                <p class="stat-percent">60%</p>
             </div>
-            <div>
-                <p>120 <span>JPG</span></p>
-                <p>30 <span>PNG</span></p>
-                <p>20 <span>PDF</span></p>
-                <p>10 <span>CSV</span></p>
-                <p>20 <span>JSON</span></p>
+            <div class="stat-files">
+                <p class="stat-fname">30 <span class="stat-ftype">JPG</span></p>
+                <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                <p class="stat-fname">10 <span class="stat-ftype">PDF</span></p>
+                <p class="stat-fname">25 <span class="stat-ftype">CSV</span></p>
+                <p class="stat-fname">25 <span class="stat-ftype">JSON</span></p>
             </div>
         </div>
         <div class="stat-card">
-            <div>
-                <p>Downloaded Metadata</p>
-                <img src="" alt="">
+            <div class="stat-header">
+                <p class="stat-title">Saved Metadata</p>
+                <img src="assets/icons/orange-save-action-floppy.svg" alt="" class="stat-img">
             </div>
-            <div>
-                <p>120</p>
-                <p>60%</p>
+            <div class="stat-figures">
+                <p class="stat-num">120</p>
+                <p class="stat-percent">60%</p>
             </div>
-            <div>
-                <p>30 <span>JPG</span></p>
-                <p>30 <span>PNG</span></p>
-                <p>10 <span>PDF</span></p>
-                <p>25 <span>CSV</span></p>
-                <p>25 <span>JSON</span></p>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div>
-                <p>Saved Metadata</p>
-                <img src="" alt="">
-            </div>
-            <div>
-                <p>120</p>
-                <p>60%</p>
-            </div>
-            <div>
-                <p>30 <span>JPG</span></p>
-                <p>30 <span>PNG</span></p>
-                <p>10 <span>PDF</span></p>
-                <p>25 <span>CSV</span></p>
-                <p>25 <span>JSON</span></p>
+            <div class="stat-files">
+                <p class="stat-fname">30 <span class="stat-ftype">JPG</span></p>
+                <p class="stat-fname">30 <span class="stat-ftype">PNG</span></p>
+                <p class="stat-fname">10 <span class="stat-ftype">PDF</span></p>
+                <p class="stat-fname">25 <span class="stat-ftype">CSV</span></p>
+                <p class="stat-fname">25 <span class="stat-ftype">JSON</span></p>
             </div>
         </div>
     </div> 
     <!-- End Statistics Cards -->
 
     <!-- Recently Saved Section -->
-    <div>
-        <div>
-            <h4>Recently Saved</h4>
-            <a href="#">See more</a>
+    <div class="recents-section">
+        <div class="recents-header">
+            <h3 class="title recents-title">Recently Saved</h3>
+            <a href="#" class="recents-more">See more</a>
         </div>
         <!-- Recently saved items -->
-        <div class="recent items">
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+        <div class="recents-wrapper">
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>How To Fetch Metadata Like A Professional</p>
-                    <span>
-                        <p>PDF</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>15mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>23 Jun 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">How To Fetch Metadata Like A Professional</h4>
+                    <span class="recents-props">
+                        <small>PDF</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>15mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>23 Jun 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- Image icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-media-image.svg" alt="" class="recents-fileicon"> <!-- Image icon image -->
                 </div>
-                <div>
-                    <p>Beach Hangout</p>
-                    <span>
-                        <p>PNG</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>4mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>26 Jun 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Beach Hangout</h4>
+                    <span class="recents-props">
+                        <small>PNG</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>4mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>26 Jun 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- Image icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-media-image.svg" alt="" class="recents-fileicon"> <!-- Image icon image -->
                 </div>
-                <div>
-                    <p>Metamagic Mockup Screen</p>
-                    <span>
-                        <p>JPEG</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>5mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>6 May 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Metamagic Mockup Screen</h4>
+                    <span class="recents-props">
+                        <small>JPEG</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>5mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>6 May 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>Steal Like An Artist</p>
-                    <span>
-                        <p>PDF</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>12mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>23 Jun 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Steal Like An Artist</h4>
+                    <span class="recents-props">
+                        <small>PDF</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>12mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>23 Jun 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>I4G & Zuri Company Profile</p>
-                    <span>
-                        <p>PDF</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>25mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>20 Jun 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">I4G & Zuri Company Profile</h4>
+                    <span class="recents-props">
+                        <small>PDF</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>25mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>20 Jun 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>Team 89 Weekly Attendance List</p>
-                    <span>
-                        <p>CSV</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>456kb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>15 May 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Team 89 Weekly Attendance List</h4>
+                    <span class="recents-props">
+                        <small>CSV</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>456kb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>15 May 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>Metamagic Landing Page Backend</p>
-                    <span>
-                        <p>JSON</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>4mb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>17 Feb 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Metamagic Landing Page Backend</h4>
+                    <span class="recents-props">
+                        <small>JSON</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>4mb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>17 Feb 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
-            <div class="recent-item">
-                <div>
-                    <img src="" alt=""> <!-- File icon image -->
+            <div class="recents-item">
+                <div class="recents-img">
+                    <img src="assets/icons/white-page.svg" alt="" class="recents-fileicon"> <!-- File icon image -->
                 </div>
-                <div>
-                    <p>Zuri Project Phase Terms and Conditions</p>
-                    <span>
-                        <p>DOC</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>96kb</p>
-                        <img src="" alt=""> <!-- Bullet point image -->
-                        <p>14 Jan 2022</p>
+                <div class="recents-info">
+                    <h4 class="recents-title">Zuri Project Phase Terms and Conditions</h4>
+                    <span class="recents-props">
+                        <small>DOC</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>96kb</small>
+                        <img src="assets/icons/ellipse.svg" alt="" class="bullet-point"> <!-- Bullet point image -->
+                        <small>14 Jan 2022</small>
                     </span>
                 </div>
-                <div>
-                    <img src="" alt=""> <!-- Download icon -->
-                    <img src="" alt=""> <!-- Share icon -->
+                <div class="recents-actionbtns">
+                    <img src="assets/icons/blue-download.svg" alt="" class="recents-actionbtn"> <!-- Download icon -->
+                    <img src="assets/icons/blue-share-android.svg" alt="" class="recents-actionbtn"> <!-- Share icon -->
                 </div>
             </div>
         </div>
@@ -338,72 +338,70 @@
     <!-- End Recently Saved Section -->
 
     <!-- File Types Section -->
-    <div>
-        <div>
-            <h4>File Types</h4>
-            <img src="" alt=""> <!-- Filter icon -->
+    <div class="files-section">
+        <div class="files-header">
+            <h3 class="files-title title">File Types</h3>
+            <!-- <img src="" alt=""> Filter icon -->
         </div>
-        <div class="file-types-slider">
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+        <div class="files-carousel">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-media-image.svg" alt="">
                 </span>
                 <p>PNG</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-page.svg" alt="">
                 </span>
                 <p>XLS</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-database-script.svg" alt="">
                 </span>
                 <p>JSON</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-page.svg" alt="">
                 </span>
                 <p>PDF</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-page.svg" alt="">
                 </span>
                 <p>DOC</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-media-image.svg" alt="">
                 </span>
                 <p>DVI</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-page.svg" alt="">
                 </span>
                 <p>TXT</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-media-image.svg" alt="">
                 </span>
                 <p>HEIC</p>
             </div>
-            <div class="file-types-item">
-                <span>
-                    <img src="" alt="">
+            <div class="files-item">
+                <span class="files-img">
+                    <img src="assets/icons/white-page.svg" alt="">
                 </span>
                 <p>CSV</p>
             </div>
         </div>
-        
     </div>
     <!-- End File Types Section -->
-
-    </main>
+  </main>
   <!-- End of Main Sections -->
 </body>
 </html>
