@@ -2,26 +2,26 @@
   --primary-color: #196DDC;
   --primary100-color: #D1E2F8;
   --primary700-color: #155BB7;
+  --primary900-color: #0D376E;
   --secondary-color: #FC7C1C;
   --neutral-color: #D0D0D0;
+  --neutral800-color: #8B8B8B;
+  --neutral1000-color: #454545;;
   --black: #2A2A2A;
   --white: #FFFFFF;
   --success-color: #07C566;
   --main-font: 'IBM Plex Sans', sans-serif;
 }
+
 /* Styles from Sanmi */
-*{
+* {
   box-sizing: border-box;
   padding:0px ;
   margin: 0px;
   font-family: var(--main-font);
 }
 body{
-  /* display: flex; */
-  /* height: 1352px; */
   background-color: #E5E6E6;
-  /* width: 100vw; */
-  /* flex-direction: row; */
 }
 #logo{
   position: relative;
@@ -178,6 +178,10 @@ main {
   width: 75vw;
   /* width: 100vw; */
 }
+
+.menubar {
+  display: none;
+}
 .navbar {
   display: flex;
   flex-direction: row;
@@ -248,6 +252,59 @@ main {
   height: 32px;
   width: 32px;
 }
+
+
+/* DISCLAIMER POPUP SECTION */
+.notif-popup {
+  /* display: flex; */ /* Removed for testing */
+  display: none; /* added for test */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  gap: 32px;
+  position: relative;
+  width: 388px;
+  height: 366px;
+  background-color: var(--white);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.notif-popup-heading {
+  color: var(--secondary-color);
+  font-size: 32px;
+  font-weight: 600px;
+  line-height: 40px;
+}
+.notif-popup-text {
+  color: var(--neutral1000-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500px;
+  line-height: 24px;
+}
+/* #notif-popup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  width: 87px;
+  height: 56px;
+} */
+.ok-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+
+  width: 87px;
+  height: 56px;
+}
+/* END DISCLAIMER POPUP SECTION */
+
+
 /* WELCOME SECTION */
 .welcome-wrapper {
   margin-top: 50px;
@@ -471,6 +528,178 @@ main {
 }
 /* END RECENTS SECTION */
 
+
+/* SHARE POPUP MODAL */
+.share-popup {
+  /* display: flex; */ /* removed for test */
+  display: none; /* added for test */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  /* gap: 8px; */
+  gap: 32px;
+  /* position: relative; */
+  width: 388px;
+  /* height: fit-content; */
+  background-color: var(--white);
+  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.share-popup-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 61px; */
+  justify-content: space-between;
+  width: 100%;
+  height: 48px;
+  /* flex: none; */
+}
+.share-popup-heading h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--primary-color);
+}
+.share-popup-heading span {
+  color: var(--secondary-color);
+}
+.share-popup-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 64px 16px 32px;
+  width: 100%;
+  height: 64px;
+  background-color: #EFEFEF;
+  border-bottom: 3px solid var(--primary-color);
+  /* border-radius: 4px; */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.share-popup-add > p {
+  color: var(--neutral800-color);
+}
+.share-popup-owner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0px; */
+  gap: 8px;
+
+  width: 100%;
+  height: 92px;
+}
+.share-popup-owner > p, .share-popup-access > p {
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height, or 150% */
+  color: #0D376E;
+}
+.spo-details {
+  display: flex;
+/* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  width: 100%;
+  height: 48px;
+  /* border: 1px solid black; */
+}
+.spo-userinfo {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+.spo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.spo-uid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  height: 46px;
+}
+.share-popup-access {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0px; */
+  gap: 16px;
+  width: 100%;
+  height: 98px;
+}
+.spa-details {
+  display: flex;
+  width: inherit;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+.spa-userinfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* color: var(--primary900-color); */
+  /* border: 1px solid black; */
+}
+.arrow-down {
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+}
+.spo-blue-text {
+  color: var(--primary900-color);
+  font-weight: 500;
+}
+.spo-small-text {
+  color: var(--neutral800-color);
+}
+.share-popup-btns {
+  display: flex;
+  width: 100%;
+  /* height: 40px; */
+  justify-content: space-between;
+  gap: 24px;
+}
+#copy-link-btn {
+  /* width: 50%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px 8px 16px;
+  gap: 16px;
+
+  width: 174px;
+  height: 40px;
+
+  /* border-radius: 4px; */
+}
+#done-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  width: 103px;
+  height: 40px;
+}
+/* END SHARE POPUP MODAL */
+
+
 /* SUPPORTED FILES SECTION */
 .files-section {
   width: 100%;
@@ -514,9 +743,3 @@ main {
   color: var(--black);
 }
 /* END SUPPORTED FILES SECTION */
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * *
-*                                                     *
-*               MOBILE VIEW CSS STYLES                *
-*                                                     *
-* * * * * * * * * * * * * * * * * * * * * * * * * * * */

@@ -139,7 +139,7 @@ main {
 }
 /* END NAVBAR SECTION */
 
-/* NAVIGATION SECTION */
+/* DISCLAIMER POPUP SECTION */
 .notif-popup {
   display: flex;
   /* display: none; */
@@ -187,7 +187,7 @@ main {
   width: 87px;
   height: 56px;
 }
-/* END NAVIGATION SECTION */
+/* END DISCLAIMER POPUP SECTION */
 
 /* WELCOME SECTION */
 .welcome-div {
